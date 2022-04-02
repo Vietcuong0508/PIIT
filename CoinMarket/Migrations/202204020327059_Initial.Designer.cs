@@ -13,7 +13,7 @@ namespace CoinMarket.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202204020218483_Initial"; }
+            get { return "202204020327059_Initial"; }
         }
         
         string IMigrationMetadata.Source

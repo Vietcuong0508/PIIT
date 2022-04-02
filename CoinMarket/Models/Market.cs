@@ -16,5 +16,10 @@ namespace CoinMarket.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int Status { get; set; }
+
+        public static implicit operator Market(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,24 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CoinMarket.Data;
+using CoinMarket.Models;
+using PagedList;
+using System;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using CoinMarket.Data;
-using CoinMarket.Models;
 
 namespace CoinMarket.Controllers
 {
     public class CoinsController : Controller
     {
         private CoinMarketContext db = new CoinMarketContext();
-
+        [HttpGet]
         // GET: Coins
-        public ActionResult Index()
+        public ViewResult Index(string sortOrder, string currentFilter, string searchString, int? page)
         {
-            return View(db.Coins.ToList());
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.IdSortParm = sortOrder == "Id" ? "id_desc" : "Id";
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+            var coins = from p in db.Coins
+                        select p;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                coins = coins.Where(p => p.Name.Contains(searchString) || p.QuoteAsset.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "id_desc":
+                    coins = coins.OrderByDescending(p => p.Id);
+                    break;
+                default:
+                    coins = coins.OrderBy(p => p.Id);
+                    break;
+            }
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(coins.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Coins/Details/5

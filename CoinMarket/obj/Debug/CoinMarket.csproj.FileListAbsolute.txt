@@ -60,6 +60,10 @@ C:\Users\Admin\source\repos\CoinMarket\CoinMarket\bin\Microsoft.CodeDom.Provider
 C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.dll
 C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.pdb
-C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.Migrations.InitialCreate.resources
-C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\bin\WebMatrix.Data.dll
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\bin\WebMatrix.WebData.dll
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\bin\WebMatrix.Data.xml
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\bin\WebMatrix.WebData.xml
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.csproj.AssemblyReference.cache
 C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.Migrations.Initial.resources
+C:\Users\Admin\source\repos\CoinMarket\CoinMarket\obj\Debug\CoinMarket.csproj.GenerateResource.cache

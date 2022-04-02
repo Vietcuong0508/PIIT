@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace CoinMarket.Data
 {
@@ -19,8 +15,8 @@ namespace CoinMarket.Data
         {
         }
 
-        public System.Data.Entity.DbSet<CoinMarket.Models.Coin> Coins { get; set; }
+        public DbSet<Models.Coin> Coins { get; set; }
 
-        public System.Data.Entity.DbSet<CoinMarket.Models.Market> Markets { get; set; }
+        public DbSet<Models.Market> Markets { get; set; }
     }
 }
